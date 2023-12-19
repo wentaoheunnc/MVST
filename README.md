@@ -9,6 +9,15 @@ This repo contains code for our ICASSP 2024 paper:
 ![architecture](figures/icassp2024-main.png)
 
 
+## Requirements
+TODO:
+
+## Datasets
+Please download the **ICBHI 2017 Challenge Respiratory Sound Database** from official [website](https://bhichallenge.med.auth.gr/ICBHI_2017_Challenge).
+
+## Usage
+TODO:
+
 ## Citation
 We thank you for showing interest in our work. 
 If you find the paper and/or the code helpful, please consider citing us using:
