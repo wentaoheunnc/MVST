@@ -106,7 +106,7 @@ python 256/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1
 --epochs 1 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
 --model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
 --from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 256 \
---pretrained_ckpt ./256/save/my_split/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
+--pretrained_ckpt ./save/256/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
 ```
 
 **Step 4**: Multi-view features gated fusion using following command:
