@@ -4,10 +4,7 @@ This repo contains code for our ICASSP 2024 paper:
 [**Multi-View Spectrogram Transformer for Respiratory Sound Classification**]()
 
 [Wentao He](https://wentaoheunnc.github.io/)\*, Yuchen Yan\*, [Jianfeng Ren](https://research.nottingham.edu.cn/en/persons/jianfeng-ren), [Ruibin Bai](http://www.cs.nott.ac.uk/~znzbrbb/), [Xudong Jiang](https://personal.ntu.edu.sg/exdjiang/default.htm)  
-*Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*, 2024. 
-
-![architecture](figures/icassp2024-main.png)
-
+*Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*, pp. 8626-8630, 2024. 
 
 ## Requirements
 TODO:
@@ -27,6 +24,7 @@ If you find the paper and/or the code helpful, please consider citing us using:
   title={Multi-View Spectrogram Transformer for Respiratory Sound Classification},
   author={He, Wentao and Yan, Yuchen and Ren, Jianfeng and Bai, Ruibin and Jiang, Xudong},
   booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={8626 -- 8630},
   year={2024}
 }
 ```
