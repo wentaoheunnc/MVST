@@ -14,7 +14,7 @@ Please download the **ICBHI 2017 Challenge Respiratory Sound Database** from off
 
 ## Usage
 
-**Step 1**: Download the pre-trained weights of AudioSet from [link](https://www.dropbox.com/s/mdsa4t1xmcimia6/audioset_16_16_0.4422.pth?dl=1). Note that we used weights for 16x16 patching.
+**Step 1**: Download the pre-trained weights of AudioSet from [link](https://www.dropbox.com/s/mdsa4t1xmcimia6/audioset_16_16_0.4422.pth?dl=1) and save to `./pretrained_models/`. Note that we used weights for 16x16 patching.
 
 **Step 2**: Fine-tune the model pre-trained from AudioSet for 50 epochs for each view using following commands:
 
