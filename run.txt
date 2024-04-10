@@ -1,0 +1,64 @@
+################ Fine Tune on ICBHI ##########################
+
+python 16/main.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 50 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce
+
+python 32/main.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 50 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce
+
+python 64/main.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 50 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce
+
+python 128/main.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 50 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce
+
+python 256/main.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 50 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce
+
+
+########## Single-View Feature extraction #################
+
+python 16/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 1 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 16 \
+--pretrained_ckpt ./save/16/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
+
+python 32/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 1 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 32 \
+--pretrained_ckpt ./save/32/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
+
+python 64/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 1 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 64 \
+--pretrained_ckpt ./save/64/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
+
+python 128/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 1 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 128 \
+--pretrained_ckpt ./save/128/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
+
+python 256/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 --class_split lungsound --n_cls 4 \
+--epochs 1 --batch_size 8 --optimizer adam --learning_rate 5e-5 --weight_decay 1e-6 --cosine \
+--model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
+--from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 256 \
+--pretrained_ckpt ./save/256/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
+
+
+################ Multi-View Fusion ##########################
+
+python fusion.py
