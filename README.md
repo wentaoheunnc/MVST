@@ -70,7 +70,6 @@ python 16/save_features.py --tag bs8_lr5e-5_ep50_seed1 --dataset icbhi --seed 1 
 --model ast --test_fold official --pad_types repeat --resz 1 --n_mels 128 --ma_update --ma_beta 0.5 \
 --from_sl_official --audioset_pretrained --method ce --pretrained --patch_size 16 \
 --pretrained_ckpt ./save/16/icbhi_ast_ce_bs8_lr5e-5_ep50_seed1/best.pth
-
 ```
 
 For 32x8:
